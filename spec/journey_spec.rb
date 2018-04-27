@@ -6,14 +6,14 @@ describe Journey do
   describe '#start_journey' do
     it 'sets an entry station' do
       subject.start_journey(station)
-      expect(subject.entry_station).to eq(station)
+      expect(subject.journey[:entry_station]).to eq(station)
     end
   end
 
   describe 'finish journey' do
     it 'sets an exit station' do
       subject.finish_journey(station)
-      expect(subject.exit_station).to eq(station)
+      expect(subject.journey[:exit_station]).to eq(station)
     end
   end
 
@@ -35,5 +35,10 @@ describe Journey do
       end
     end
   end
+
+  describe 'if  journey is complete' do
+    context
+  end
+
 
 end
